@@ -1,6 +1,7 @@
 species=Neisseria_gonorrhoeae
-species_snvs_dir=/u/scratch/p/peterlau/m12/${species}_aligned/snps
-genome_accession=PRJEB2999
+species_snvs_dir=../${species}_aligned/snps
+genome_accession=PRJEB2999 # Grad et al 2014
+# taxon_id=485 #Neisseria gonorrhoeae
 ref_accession=GCF_000006845.1
 mkdir -p $species_snvs_dir 
 
@@ -8,6 +9,8 @@ mkdir -p $species_snvs_dir
 echo downloading genomes for $species
 # need ncbi datasets tool available in PATH: https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/download-and-install/
 datasets download genome accession $genome_accession --dehydrated --annotated --assembly-source 'RefSeq'
+# another example 
+# datasets download genome taxon $taxon_id --dehydrated --annotated --assembly-source 'RefSeq'
 mv ncbi_dataset.zip  $species_snvs_dir/ 
 unzip $species_snvs_dir/ncbi_dataset.zip -d $species_snvs_dir/accession_genomes
 datasets rehydrate --directory $species_snvs_dir/accession_genomes 

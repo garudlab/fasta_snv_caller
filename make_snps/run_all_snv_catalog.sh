@@ -6,7 +6,7 @@
 SPECIES=Neisseria_gonorrhoeae
 ref_name=fa_1090 # whatever you want to call it, in case you try multiple refs
 ref_fasta=GCF_000006845.1_ASM684v1_genomic
-species_snvs_dir=/u/scratch/p/peterlau/m12/${SPECIES}_aligned/snps/
+species_snvs_dir=../${SPECIES}_aligned/snps/
 
 
 GENOMES_DIR=$species_snvs_dir/${SPECIES}_fastas

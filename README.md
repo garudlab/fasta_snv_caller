@@ -27,7 +27,9 @@ FA1090.
 
 ## A quick tutorial (for *Neisseria gonorrhoeae*, ~20 min):
 
-0. (`conda env create -f fasta_snv_caller.yml`)
+0. a. (`conda env create -f snp_annotation_env.yml`)
+
+   b. `conda activate snp_annotation_env`
 1. `bash make_snps/download_command.sh`
 2. `bash make_snps/run_all_snv_catalog.sh`
 3. `bash annotate_haps/run_annotations.sh`
@@ -51,7 +53,7 @@ etc. in the `nucmer` settings may improve your SNP calling :)
 ## What's required
 
 Environment dependencies: 
-* Python (3.8.5) (for env see fasta_snv_caller.yaml)
+* Python (3.8.5) (for env see snp_annotation_env.yaml)
 * MUMmer (I'm using [4.0.0rc1)](https://github.com/mummer4/mummer/releases) 
 * (optional) [NCBI's datasets tool](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/command-line-tools/download-and-install/) 
 (if planning on downloading RefSeq data straight from NCBI)
